@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.3;net45</TargetFrameworks>
+    <TargetFrameworks>netstandard1.3;net45;netcoreapp2.0</TargetFrameworks>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageLicenseUrl>https://github.com/IgorMilavec/TPLink-SmartHome/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/IgorMilavec/TPLink-SmartHome</PackageProjectUrl>
@@ -18,6 +18,10 @@
     <Product>TPLink.SmartHome</Product>
     <Company></Company>
     <Version>1.0.2</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.3|AnyCPU'">
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;NETSTANDARD1_3;NETCOREAPP2.0</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
